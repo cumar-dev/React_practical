@@ -1,11 +1,15 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import UserProfile from './UserProfile'
+import UserContext from './UserContext'
 
-const Navbar = ({user}) => {
+// const Navbar = ({user}) => {
+const Navbar = () => {
+  const user = useContext(UserContext);
   return (
   <>
-  <h2>Navbar</h2>
-  <UserProfile user={user} />
+  <h2>Navbar in admin of {user.role}</h2>
+  {/* <UserProfile user={user} /> */}
+  <UserProfile />
   </>
   )
 }

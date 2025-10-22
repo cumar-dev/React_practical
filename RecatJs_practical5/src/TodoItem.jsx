@@ -23,7 +23,14 @@ const TodoItem = ({todo}) => {
   return (
    <>
    <li>
-    <span>{todo.text}</span>
+    <span 
+     style={{
+          textDecoration: todo.completed ? "line-through" : "none",
+          cursor: "pointer",
+        }}
+    onClick={()=> dispatch({type: "toggle", payload: todo.id})}>
+     {todo.text}
+      </span>
     <button onClick={handleEdit}>Edit</button>
       <button onClick={handleDelete}>Delete</button>
    </li>

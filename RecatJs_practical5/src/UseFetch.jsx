@@ -19,7 +19,7 @@ const UseFetch = (url) => {
          } catch (error) {
              // console.error('error exsists', error);
              if(isMounted) {
-           setError(error.message);
+             setError(error.message);
              setLoading(false);
              }
              

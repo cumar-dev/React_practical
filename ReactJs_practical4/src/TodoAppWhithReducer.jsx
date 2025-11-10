@@ -11,7 +11,7 @@ switch(action.type) {
         return state.map((todo)=> todo.id === action.payload ? {...todo, Text: action.payload.newText}: todo);    
     case "Delete":
         return state.filter((todo)=> todo.id !== action.payload);
-    case "Clear All":
+    case "ClearAll":
         return [];
     default:
         return state;    
@@ -36,7 +36,7 @@ function TodoApp() {
         <h2>Todo App</h2>
         <input type="text" placeholder="Enter a new todo" value={todo} onChange={(e)=> setToDo(e.target.value)}/>
         <button onClick={handleAdd}>Add</button>
-        <button onClick={()=> dispatch({type: "Clear All"})}>Clear All</button>
+        <button onClick={()=> dispatch({type: "ClearAll"})}>Clear All</button>
         <ul>
             {
                 state.map((todo)=>(

@@ -9,7 +9,7 @@ const Registration_Form = () => {
      reset();
     }
     const password = watch("password");
-    const confirmPassword = watch('confirmPassword');
+    // const confirmPassword = watch('confirmPassword');
   return (
     <>
     <div className="min-h-screen bg-gray-50 py-10 px-4-gray-500 min-h-screen py-6 px-6 mb-6">

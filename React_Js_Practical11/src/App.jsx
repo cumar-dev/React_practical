@@ -20,6 +20,7 @@ const App = () => {
       <span>Page visit: {pageVisited}</span>
     </div>
     <NavLinks />
+    
     <main className='p-6'>
     <Outlet />
     </main>

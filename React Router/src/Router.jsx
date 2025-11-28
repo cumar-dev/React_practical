@@ -6,6 +6,12 @@ import About from "./Pages/About";
 import Contect from "./Pages/Contect";
 import UserList from "./Pages/UserList";
 import UserProfile from "./Pages/UserProfile";
+import ProductsDetails from "./Pages/ProductsDetails";
+import Products from "./Pages/Products";
+import DashboardLayout from "./Components/DashboardLayout";
+import { Children } from "react";
+import OverView from "./Components/OverView";
+import Settings from "./Components/Settings";
 const router = createBrowserRouter([
     {
         path: "/",
@@ -31,7 +37,34 @@ const router = createBrowserRouter([
             {
                 path: "userList/:userId",
                 element: <UserProfile />
+            },
+            {
+                path: "products",
+                element: <Products /> 
+            },
+            {
+                 path: "products/:categoryId",
+                 element: <ProductsDetails />
+            },
+            {
+                path: "products/:categoryId/:productId",
+                element: <ProductsDetails />
+            },
+            {
+                path: "dashboard",
+                element: <DashboardLayout />,
+                children: [
+                    {
+                        index: true,
+                         element: <OverView />
+                    },
+                    {
+                        path: "settings",
+                        element: <Settings />
+                    }
+                ]
             }
+            
         ],
     },
 ]);

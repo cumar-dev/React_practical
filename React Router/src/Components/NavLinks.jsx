@@ -12,7 +12,9 @@ const NavLinks = () => {
           <NavLink className={({isActive}) => isActive ? "font-bold underline" : undefined} to="/">Home</NavLink>
           <NavLink className={({isActive}) => isActive ? "font-bold underline" : undefined} to="/about">About</NavLink>
           <NavLink className={({isActive}) => isActive ? "font-bold underline" : undefined} to="/Contect">Contect</NavLink>
-          <NavLink className={({isActive})=> isActive ? "font-bold underline" : undefined} to="./userList">userList</NavLink>
+          <NavLink className={({isActive})=> isActive ? "font-bold underline" : undefined} to="/userList">userList</NavLink>
+         <NavLink className={({isActive})=> isActive ? "font-bold underline" : undefined} to="/products">Products</NavLink>
+         <NavLink className={({isActive}) => isActive ? "font-bold underline" : undefined} to="/dashboard">Dashboard</NavLink>
         </nav>
 
         <Outlet />
